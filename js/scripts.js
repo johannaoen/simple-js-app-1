@@ -1,5 +1,5 @@
-let title = 'Hello World';
-alert(title);
-
-let favoriteFood = 'Fried Chicken';
-document.write(favoriteFood);
+let pokemonList = {
+  name:"Bulbasaur",
+  height:7,
+  types:['grass', 'poison', 'fighting', 'steel']
+};
