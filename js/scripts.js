@@ -14,10 +14,11 @@ types: ["fire", "flying"]
 }
 ]
 ;
-for(let i=0; i<pokemonList.length; i++){
-document.write (pokemonList[i].name + pokemonList[i].height + "<p>");
-}
+let height = 1.7;
 let result;
-if(height>1) {
-  result = "That is a BIG pokemon";
+if (height > 1){
+  result = 'That is a BIG pokemon';
+}
+for(let i=0; i<pokemonList.length; i++){
+document.write (pokemonList[i].name + pokemonList[i].height + pokemonList.result + "<p>");
 }
