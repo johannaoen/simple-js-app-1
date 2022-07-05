@@ -16,15 +16,8 @@ types: ["fire", "flying"]
 ;
 for (let i=0; i < pokemonList.length; i++){
   if (pokemonList[i].height > 1){
-  document.write (pokemonList[i].name + " - " + pokemonList[i].height + "<p>");
-  }
+  document.write (pokemonList[i].name + " - " + pokemonList[i].height + "  " + "~This is a BIG pokemon~" + "<p>");
+} else {
+  document.write (pokemonList[i]).name + " - " + pokemonList[i].height);
 }
-
-function div (dividend, divisor);
-if (val2===0){
-  return "You're trying to divide by zero";}
-    else {
-      let result = dividend / divisor;
-      return result;
-    }
-  }
+}
