@@ -18,6 +18,6 @@ for (let i=0; i < pokemonList.length; i++){
   if (pokemonList[i].height > 1){
   document.write (pokemonList[i].name + " - " + pokemonList[i].height + "  " + "~This is a BIG pokemon~" + "<p>");
 } else {
-  document.write (pokemonList[i]).name + " - " + pokemonList[i].height);
+  document.write (pokemonList[i].name + " - " + pokemonList[i].height + "<p>");
 }
 }
