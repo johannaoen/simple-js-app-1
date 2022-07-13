@@ -25,11 +25,11 @@ return {
   add: add,
   getAll: getAll
   }
-};
 })();
 
-document.write (pokemonRepository.getAll);
-document.write (pokemonRepository.add(Eevee);
+document.write (pokemonRepository.getAll());
+pokemonRepository.add({name: 'Pokemon'});
+document.write (pokemonRepository.getAll());
 
 
 pokemonList.forEach(function(pokemonList) {
