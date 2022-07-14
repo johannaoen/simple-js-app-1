@@ -32,6 +32,6 @@ pokemonRepository.add({name: 'Pokemon'});
 document.write (pokemonRepository.getAll());
 
 
-pokemonList.forEach(function(pokemonList) {
-  document.write(pokemonList.name + ' is ' + pokemonList.height + ' inches tall.'+ '<p>');
+pokemonRepository.forEach(function(pokemonRepository) {
+  document.write(pokemonRepository.name + ' is ' + pokemonRepository.height + ' inches tall.'+ '<p>');
 });
