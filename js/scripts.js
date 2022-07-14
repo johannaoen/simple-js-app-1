@@ -1,6 +1,6 @@
 let pokemonRepository = (function () {
-let pokemonList = [
-  {name:"Bulbasaur",
+let pokemonList = []
+*  {name:"Bulbasaur",
   height: 0.7,
   types:['grass', 'poison', 'fighting', 'steel']
 },
@@ -16,8 +16,12 @@ types: ["fire", "flying"]
 ]
 ;
 function add (pokemon) {
+  if (typeof pokemon === 'object' && 'name' in pokemon) {
   pokemonList.push(pokemon);
-}
+} else {
+document.write('Pokemon is not valid');
+};
+
 function getAll() {
   return pokemonList;
 }
@@ -31,7 +35,9 @@ document.write (pokemonRepository.getAll());
 pokemonRepository.add({name: 'Pokemon'});
 document.write (pokemonRepository.getAll());
 
+function myloopFunction(pokemonList){
+  document.write(pokemonList.name + ' is ' + pokemonList.height + ' inches tall.'+ '<p>');
+}
+pokemonRepository.forEach(myloopFunction);
 
-pokemonRepository.forEach(function(pokemonRepository) {
-  document.write(pokemonRepository.name + ' is ' + pokemonRepository.height + ' inches tall.'+ '<p>');
 });
