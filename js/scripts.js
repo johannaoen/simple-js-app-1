@@ -16,7 +16,7 @@ types: ["fire", "flying"]
 ]
 ;
 function add (pokemon) {
-  if (typeof pokemon === 'object' && 'name' in pokemon) {
+  if (typeof pokemon === 'object') {
   pokemonList.push(pokemon);
 } else {
 document.write('Pokemon is not valid');
