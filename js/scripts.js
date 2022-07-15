@@ -1,6 +1,6 @@
 let pokemonRepository = (function () {
 let pokemonList = []
-*  {name:"Bulbasaur",
+ {name:"Bulbasaur",
   height: 0.7,
   types:['grass', 'poison', 'fighting', 'steel']
 },
@@ -38,6 +38,6 @@ document.write (pokemonRepository.getAll());
 function myloopFunction(pokemonList){
   document.write(pokemonList.name + ' is ' + pokemonList.height + ' inches tall.'+ '<p>');
 }
-pokemonRepository.forEach(myloopFunction);
+pokemonRepository.getall().forEach(myloopFunction);
 
 });
