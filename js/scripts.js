@@ -34,12 +34,11 @@ return {
 
 pokemonRepository.getAll().forEach(function(pokemonList){
 if (pokemonList.height < 8 && pokemonList.height > 5) {
-      document.write (pokemonList.name + " is " + pokemonList.height + " inches tall." + "It is a small body!" + "<p>");
+      document.write (pokemonList.name + " is " + pokemonList.height + " inches tall." + " It is a small body!" + "<p>");
     }
     else if (pokemonList.height < 11) {
-      document.write(pokemonList.name + " is " + pokemonList.height + " inches tall." + "It is a normal body!" + "<p>");
+      document.write(pokemonList.name + " is " + pokemonList.height + " inches tall." + " It is a normal body!" + "<p>");
     } else {
-  document.write(pokemonList.name + " is " + pokemonList.height + " inches tall." + "WOW it is a large body!" + "<p>");
-}
+  document.write(pokemonList.name + " is " + pokemonList.height + " inches tall." + " WOW it is a large body!" + "<p>");
+};
 });
-();
