@@ -5,12 +5,12 @@ let pokemonList = [
   types:['grass', 'poison', 'fighting', 'steel']
 },
 {name: "Charizard",
-height: 1.7,
+height: 11,
 types: ["fire", "flying"]
 },
 {
   name: "Squirtle",
-  height: 1,
+  height: 5,
   types: ["water"]
 }
 ]
@@ -26,19 +26,37 @@ document.write("Pokemon is not valid");
 function getAll() {
   return pokemonList;
 }
+function addListItem (pokemon) {
+  let listofpokemon = document.querySelector (".pokemon-list");
+  let listItem = document.createElement("li");
+  let button = document.createElement("button").addEventListener('click');
+    button.classList.add("button-class");
+ button.innerText = pokemonList.name;
+  listItem.appendChild(button);
+  listofpokemon.appendChild(listItem);
+}
+function showDetails (pokemon) {
+  console.log (pokemon)
+}
 return {
   add: add,
   getAll: getAll
+  addListItem: addListItem
 };
 })();
 
-pokemonRepository.getAll().forEach(function(pokemonList){
-if (pokemonList.height < 8 && pokemonList.height > 5) {
-      document.write (pokemonList.name + " is " + pokemonList.height + " inches tall." + " It is a small body!" + "<p>");
-    }
-    else if (pokemonList.height < 11) {
-      document.write(pokemonList.name + " is " + pokemonList.height + " inches tall." + " It is a normal body!" + "<p>");
-    } else {
-  document.write(pokemonList.name + " is " + pokemonList.height + " inches tall." + " WOW it is a large body!" + "<p>");
-};
+pokemonRepository.getAll().forEach(function (pokemon){
+pokemonRepository.addListItem(pokemon);
 });
+
+
+
+
+//*if (pokemonList.height < 10 && pokemonList.height > 2) {
+//      document.write (pokemonList.name + " is " + pokemonList.height + " inches tall." + " It is a small pokemon." + "<p>");
+//    }
+//    else if (pokemonList.height < 2) {
+//      document.write(pokemonList.name + " is " + pokemonList.height + " inches tall." + " It is a normal-sized pokemon." + "<p>");
+//    } else {
+//  document.write(pokemonList.name + " is " + pokemonList.height + " inches tall." + " WOW it is a large pokemon!" + "<p>");
+//};
