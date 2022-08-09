@@ -29,7 +29,7 @@ let pokemonRepository = (function() {
     button.classList.add('name-button');
 button.setAttribute("data-toggle", "modal");
 button.setAttribute("data-target", "#pokemon-modal");
-$(buttonItem).addClass('button-class btn-block btn m1');
+$(buttonItem).classList.add('button-class btn-block btn m1');
 
 
     listItem.appendChild(button);
@@ -83,12 +83,12 @@ modalTitle.empty();
 modalBody.empty();
 
 let nameElement = $('<h1>' + pokemon.name + '</h1>');
-let imageElement = $('img class = "pokemon-img">')
+let imageElement = $('<img class = "pokemon-img">')
 imageElement.attr("src", pokemon.imageUrl);
-let heightElement = $('<p' + 'Height : ' + pokemon.height + '</p>');
-let weightElement = $('<p' + 'Weight : ' + pokemon.weight + '</p>');
-let typeElement = $('<p' + 'Types : ' + pokemon.types + '</p>');
-let abilitiesElement = $('<p' + 'Abilities : ' + pokemon.abilities + '</p>');
+let heightElement = $('<p>' + 'Height : ' + pokemon.height + '</p>');
+let weightElement = $('<p>' + 'Weight : ' + pokemon.weight + '</p>');
+let typeElement = $('<p>' + 'Types : ' + pokemon.types + '</p>');
+let abilitiesElement = $('<p>' + 'Abilities : ' + pokemon.abilities + '</p>');
 
 modalTitle.append(nameElement);
 modalBody.append(imageElement);
