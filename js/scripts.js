@@ -1,7 +1,7 @@
 let pokemonRepository = (function() {
   let pokemonList = [];
-  let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
-  let modalContainer = document.querySelector('#modal-container');
+  let apiUrl = "https://pokeapi.co/api/v2/pokemon/?limit=150";
+  let modalContainer = document.querySelector("#modal-container");
 
   function add(newItem) {
     if(
@@ -20,7 +20,7 @@ let pokemonRepository = (function() {
   }
 
   function addListItem(pokemon) {
-    let pokemonList = document.querySelector('.pokemon-list');
+    let pokemonList = document.querySelector(".pokemon-list");
     let listItem = document.createElement('li');
         pokemonList.classList.add('group-list-item');
         pokemonList.classList.add("col-sm-4", "col-md-6", "col-lg-12");
@@ -59,7 +59,7 @@ $(buttonItem).classList.add('button-class btn-block btn m1');
       });
     }).catch(function (e) {
       console.error(e);
-    })
+    });
   }
 
   function loadDetails(item) {
@@ -85,10 +85,10 @@ modalBody.empty();
 let nameElement = $('<h1>' + pokemon.name + '</h1>');
 let imageElement = $('<img class = "pokemon-img">')
 imageElement.attr("src", pokemon.imageUrl);
-let heightElement = $('<p>' + 'Height : ' + pokemon.height + '</p>');
-let weightElement = $('<p>' + 'Weight : ' + pokemon.weight + '</p>');
-let typeElement = $('<p>' + 'Types : ' + pokemon.types + '</p>');
-let abilitiesElement = $('<p>' + 'Abilities : ' + pokemon.abilities + '</p>');
+let heightElement = $("<p>" + 'Height : ' + pokemon.height + "<p>");
+let weightElement = $("<p>" + 'Weight : ' + pokemon.weight + "<p>");
+let typeElement = $("<p>" + 'Types : ' + pokemon.types + "<p>");
+let abilitiesElement = $("<p>" + 'Abilities : ' + pokemon.abilities + "<p>");
 
 modalTitle.append(nameElement);
 modalBody.append(imageElement);
