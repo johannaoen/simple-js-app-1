@@ -71,9 +71,8 @@ button.setAttribute("data-target", "#pokemon-modal");
       item.imageUrl = details.sprites.front_default;
       item.weight = details.weight;
       item.height = details.height;
-      item.type = details.type;
-      item.abilities = details.abilities;
-
+      item.ability = details.ability;
+console.log (details);
     }).catch(function (e) {
       console.error(e);
     });
@@ -90,14 +89,12 @@ let imageElement = $('<img class = "pokemon-img">')
 imageElement.attr("src", pokemon.imageUrl);
 let heightElement = $('<p>' + 'Height : ' + pokemon.height + '</p>');
 let weightElement = $('<p>' + 'Weight : ' + pokemon.weight + '</p>');
-let typeElement = $('<p>' + 'Types : ' + pokemon.type + '</p>');
-let abilitiesElement = $('<p>' + 'Abilities : ' + pokemon.abilities + '</p>');
+let abilityElement = $('<p>' + 'Abilities : ' + pokemon.ability + '</p>');
 
 modalTitle.append(nameElement);
 modalBody.append(imageElement);
 modalBody.append(heightElement);
 modalBody.append(weightElement);
-modalBody.append(typeElement);
 }
 
 
