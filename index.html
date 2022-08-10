@@ -11,12 +11,14 @@
 
   <body class = "container page-container">
     <!--- Header --->
-    <header class = "page-header">
-      <nav class="navbar sticky-top justify-content-center navbar-dark bg-dark">
+    <header>
+      <nav class="navbar navbar-expand-lg justify-content-center fixed-top navbar-dark bg-dark">
 <div class="row">
   <div class="col">
     <!---INSERT IMAGE HEREEE --->
-    <img src="https://archives.bulbagarden.net/media/upload/4/4b/Pok%C3%A9dex_logo.png" alt="pokedex logo">
+    <a href="#" class="navbar-brand">
+    <img src="https://archives.bulbagarden.net/media/upload/4/4b/Pok%C3%A9dex_logo.png"  class="d-inline-block align-top" alt="pokedex logo">
+    </a>
   </div>
 </div>
 </nav>
@@ -24,7 +26,7 @@
 
 <main>
     <div class="pokemon-container">
-      <ul class = "list-group pokemon-list"></ul>
+      <ul class = "list-group pokemon-list list-unstyled"></ul>
       <!--Modal-->
 <div class="modal fade" id="pokemon-modal" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-dialog" role="document">
