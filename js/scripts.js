@@ -72,6 +72,7 @@ button.setAttribute("data-target", "#pokemon-modal");
       item.weight = details.weight;
       item.height = details.height;
       item.type = details.type;
+      item.abilities = details.abilities;
 
     }).catch(function (e) {
       console.error(e);
